@@ -8,15 +8,18 @@ import {
 import { transferPlayer } from "@minecraft/server-admin";
 
 // /ev:transfer <players> <serverIp> <serverPort> sends players to another server.
-// Coberto's Utilities has the same command, so don't turn on both packs.
+// Operators can type it in chat, and command blocks, NPC buttons and functions can
+// run it too (like an NPC that runs /ev:transfer @initiator ...), which vanilla
+// /transfer can't. Only operators can set those up, so players still can't use it.
+// Coberto's Utilities copies this file (as scripts/transfer.js) with sync.ps1.
 
 system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 	customCommandRegistry.registerCommand(
 		{
 			name: "ev:transfer",
-			description: "Transfer a player to another server",
-			// Admin = operators only, and command blocks can't run it.
-			permissionLevel: CommandPermissionLevel.Admin,
+			description: "Transfer players to another server",
+			// Game Directors = operators, command blocks and NPCs.
+			permissionLevel: CommandPermissionLevel.GameDirectors,
 			cheatsRequired: false,
 			mandatoryParameters: [
 				{ type: CustomCommandParamType.PlayerSelector, name: "players" },
@@ -25,15 +28,11 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 			],
 		},
 		(origin, players, serverIp, serverPort) => {
-			// The server console outranks operators, so the permission level alone
-			// doesn't block it. Only accept the command when a player typed it.
-			const runByPlayer =
-				origin.sourceType === CustomCommandSource.Entity &&
-				origin.sourceEntity?.typeId === "minecraft:player";
-			if (!runByPlayer) {
+			// The server console has vanilla /transfer for this.
+			if (origin.sourceType === CustomCommandSource.Server) {
 				return {
 					status: CustomCommandStatus.Failure,
-					message: "Only an operator can use /ev:transfer, from in-game chat.",
+					message: "Use /ev:transfer in game, from chat, a command block or an NPC.",
 				};
 			}
 
