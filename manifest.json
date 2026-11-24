@@ -8,20 +8,20 @@
 		"description": "Operators can send players to another server with /thecoberto:transfer.",
 		"min_engine_version": [ 1, 26, 60 ],
 		"uuid": "2ae58169-964f-4713-aa13-a3011730b70d",
-		"version": [ 1, 2, 0 ]
+		"version": [ 2, 0, 0 ]
 	},
 	"modules": [
 		{
 			"type": "data",
 			"uuid": "e35da4f8-6f83-44f9-aa94-4ec9599dae7b",
-			"version": [ 1, 2, 0 ]
+			"version": [ 2, 0, 0 ]
 		},
 		{
 			"type": "script",
 			"language": "javascript",
 			"uuid": "eb4052a0-6cb4-4daa-a359-403d25b8a573",
 			"entry": "scripts/main.js",
-			"version": [ 1, 2, 0 ]
+			"version": [ 2, 0, 0 ]
 		}
 	],
 	"dependencies": [
