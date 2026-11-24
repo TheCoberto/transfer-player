@@ -3,10 +3,10 @@
 **Transfer Player** is a Minecraft Bedrock add-on that lets operators send players to another server:
 
 ```
-/ev:transfer <players> <serverIp> <serverPort>
+/thecoberto:transfer <players> <serverIp> <serverPort>
 ```
 
-Operators can type it in chat, and command blocks, NPC buttons and functions can run it too, so you can build a hub where an NPC button or a pressure plate sends players to another server (`/ev:transfer @initiator play.example.net 19132`). Vanilla `/transfer` can't do that: it only works from the server console. Only operators can place command blocks and set up NPCs, so players can't use it themselves. Any player can be sent. Cheats don't need to be on.
+Operators can type it in chat, and command blocks, NPC buttons and functions can run it too, so you can build a hub where an NPC button or a pressure plate sends players to another server (`/thecoberto:transfer @initiator play.example.net 19132`). Vanilla `/transfer` can't do that: it only works from the server console. Only operators can place command blocks and set up NPCs, so players can't use it themselves. Any player can be sent. Cheats don't need to be on.
 
 Requires the **Beta APIs** experiment, because sending players to another server is only available in the beta `@minecraft/server-admin` module. Beta versions change with Minecraft updates, so after an update the versions in `manifest.json` may need bumping (look up the `beta` tag of `@minecraft/server` and `@minecraft/server-admin` on npm).
 
