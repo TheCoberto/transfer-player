@@ -16,13 +16,13 @@ Paste these into the CurseForge Authors Console. Once the project is approved, C
 
 Running more than one server? Transfer Player sends players to another Bedrock server, so you can link a hub to your minigames, survival and creative servers.
 
-`/ev:transfer <players> <serverIp> <serverPort>`
+`/thecoberto:transfer <players> <serverIp> <serverPort>`
 
 Unlike vanilla `/transfer`, which only works from the server console, this works from:
 
-- **NPC buttons:** an NPC that runs `/ev:transfer @initiator play.example.net 19132` sends whoever clicks the button.
+- **NPC buttons:** an NPC that runs `/thecoberto:transfer @initiator play.example.net 19132` sends whoever clicks the button.
 - **Command blocks:** a pressure plate or button wired to a command block becomes a portal to another server.
-- **Chat:** operators can type it, like `/ev:transfer @a play.example.net 19132` to send everyone online.
+- **Chat:** operators can type it, like `/thecoberto:transfer @a play.example.net 19132` to send everyone online.
 
 Only operators can type it or set up command blocks and NPCs, so players can't send themselves or anyone else. Any player can be sent, and cheats don't need to be on.
 
@@ -43,7 +43,7 @@ Beta APIs change with Minecraft updates, so after a big update you may need a ne
 ### Changelog
 
 **1.2.0**
-- Command blocks and NPC buttons can now send players to another server, like an NPC that runs /ev:transfer @initiator <ip> <port>
+- Command blocks and NPC buttons can now send players to another server, like an NPC that runs /thecoberto:transfer @initiator <ip> <port>
 - Players still can't use it themselves
 
 **1.1.0**
@@ -57,5 +57,5 @@ Beta APIs change with Minecraft updates, so after a big update you may need a ne
 - **Game versions:** 1.26.60 and newer (Beta APIs experiment required)
 - **Changelog:**
 
-- Command blocks and NPC buttons can now send players to another server, like an NPC that runs /ev:transfer @initiator <ip> <port>
+- Command blocks and NPC buttons can now send players to another server, like an NPC that runs /thecoberto:transfer @initiator <ip> <port>
 - Players still can't use it themselves

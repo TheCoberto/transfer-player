@@ -7,16 +7,16 @@ import {
 } from "@minecraft/server";
 import { transferPlayer } from "@minecraft/server-admin";
 
-// /ev:transfer <players> <serverIp> <serverPort> sends players to another server.
+// /thecoberto:transfer <players> <serverIp> <serverPort> sends players to another server.
 // Operators can type it in chat, and command blocks, NPC buttons and functions can
-// run it too (like an NPC that runs /ev:transfer @initiator ...), which vanilla
+// run it too (like an NPC that runs /thecoberto:transfer @initiator ...), which vanilla
 // /transfer can't. Only operators can set those up, so players still can't use it.
 // Coberto's Utilities copies this file (as scripts/transfer.js) with sync.ps1.
 
 system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 	customCommandRegistry.registerCommand(
 		{
-			name: "ev:transfer",
+			name: "thecoberto:transfer",
 			description: "Transfer players to another server",
 			// Game Directors = operators, command blocks and NPCs.
 			permissionLevel: CommandPermissionLevel.GameDirectors,
@@ -32,7 +32,7 @@ system.beforeEvents.startup.subscribe(({ customCommandRegistry }) => {
 			if (origin.sourceType === CustomCommandSource.Server) {
 				return {
 					status: CustomCommandStatus.Failure,
-					message: "Use /ev:transfer in game, from chat, a command block or an NPC.",
+					message: "Use /thecoberto:transfer in game, from chat, a command block or an NPC.",
 				};
 			}
 

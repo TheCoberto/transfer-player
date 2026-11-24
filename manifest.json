@@ -5,7 +5,7 @@
 	},
 	"header": {
 		"name": "Transfer Player",
-		"description": "Operators can send players to another server with /ev:transfer.",
+		"description": "Operators can send players to another server with /thecoberto:transfer.",
 		"min_engine_version": [ 1, 26, 60 ],
 		"uuid": "2ae58169-964f-4713-aa13-a3011730b70d",
 		"version": [ 1, 2, 0 ]
