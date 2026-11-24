@@ -42,6 +42,9 @@ Beta APIs change with Minecraft updates, so after a big update you may need a ne
 
 ### Changelog
 
+**2.0.0**
+- Commands now use the thecoberto: namespace instead of ev: (like /thecoberto:transfer). Update command blocks and NPC buttons that use /ev:...
+
 **1.2.0**
 - Command blocks and NPC buttons can now send players to another server, like an NPC that runs /thecoberto:transfer @initiator <ip> <port>
 - Players still can't use it themselves
@@ -51,11 +54,10 @@ Beta APIs change with Minecraft updates, so after a big update you may need a ne
 
 ## File
 
-- **File:** `builds\Transfer-Player-1.2.0.mcaddon`
-- **Display name:** Transfer Player 1.2.0
+- **File:** `builds\Transfer-Player-2.0.0.mcaddon`
+- **Display name:** Transfer Player 2.0.0
 - **Release type:** Release
 - **Game versions:** 1.26.60 and newer (Beta APIs experiment required)
 - **Changelog:**
 
-- Command blocks and NPC buttons can now send players to another server, like an NPC that runs /thecoberto:transfer @initiator <ip> <port>
-- Players still can't use it themselves
+- Commands now use the thecoberto: namespace instead of ev: (like /thecoberto:transfer). Update command blocks and NPC buttons that use /ev:...
